@@ -3,6 +3,8 @@ plugins {
   alias(libs.plugins.jmh)
 }
 
+if (System.getProperty("JITPACK") == "true") group = "${parent!!.group}.adventure" // Mohist+ - Ensure JitPack uses correct group in POMs
+
 configurations {
   testCompileOnly {
     extendsFrom(compileOnlyApi.get())

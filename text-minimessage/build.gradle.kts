@@ -3,6 +3,8 @@ plugins {
   alias(libs.plugins.jmh)
 }
 
+if (System.getProperty("JITPACK") == "true") group = "${parent!!.group}.adventure" // Mohist+ - Ensure JitPack uses correct group in POMs
+
 description = "A string-based, user-friendly format for representing Minecraft: Java Edition chat components."
 
 dependencies {

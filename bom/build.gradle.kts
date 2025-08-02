@@ -3,6 +3,8 @@ plugins {
   id("adventure.base-conventions")
 }
 
+if (System.getProperty("JITPACK") == "true") group = "${parent!!.group}.adventure" // Mohist+ - Ensure JitPack uses correct group in POMs
+
 indra {
   configurePublications {
     from(components["javaPlatform"])

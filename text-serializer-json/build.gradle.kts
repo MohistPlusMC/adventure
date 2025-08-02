@@ -4,6 +4,8 @@ plugins {
   alias(libs.plugins.jmh) apply false
 }
 
+if (System.getProperty("JITPACK") == "true") group = "${parent!!.group}.adventure" // Mohist+ - Ensure JitPack uses correct group in POMs
+
 val jmh by sourceSets.registering {
   compileClasspath += sourceSets.main.get().compileClasspath
   runtimeClasspath += sourceSets.main.get().runtimeClasspath

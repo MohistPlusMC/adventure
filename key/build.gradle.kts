@@ -2,6 +2,8 @@ plugins {
   id("adventure.common-conventions")
 }
 
+if (System.getProperty("JITPACK") == "true") group = "${parent!!.group}.adventure" // Mohist+ - Ensure JitPack uses correct group in POMs
+
 configurations {
   testCompileOnly {
     extendsFrom(compileOnlyApi.get())
