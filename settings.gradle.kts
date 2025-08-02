@@ -33,7 +33,7 @@ rootProject.name = "adventure-parent"
 sequenceOf(
   "api",
   "annotation-processors",
-  "bom",
+  // "bom",
   "extra-kotlin",
   "key",
   "nbt",

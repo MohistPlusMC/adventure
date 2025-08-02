@@ -45,7 +45,7 @@ configurations {
 dependencies {
   errorprone(libs.errorprone)
   annotationProcessor(libs.contractValidator) 
-  api(platform(project(":adventure-bom")))
+  // api(platform(project(":adventure-bom")))
   checkstyle(libs.stylecheck)
   testImplementation(libs.guava.testlib)
   testImplementation(libs.truth)
